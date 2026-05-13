@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Ejemplo de LaunchAgent. Copia a ~/Library/LaunchAgents/ y sustituye
+  TUUSER y los paths absolutos por los tuyos. El sufijo del label debe
+  ser único en tu sistema.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.TUUSER.whatsapp-claude</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/caffeinate</string>
+        <string>-di</string>
+        <string>/opt/homebrew/bin/uv</string>
+        <string>run</string>
+        <string>--directory</string>
+        <string>/Users/TUUSER/whatsapp-claude-bridge</string>
+        <string>bridge.py</string>
+    </array>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/TUUSER/.nvm/versions/node/vXX.XX.X/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+        <key>HOME</key>
+        <string>/Users/TUUSER</string>
+    </dict>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/TUUSER/whatsapp-claude-bridge</string>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <false/>
+        <key>Crashed</key>
+        <true/>
+    </dict>
+
+    <key>ThrottleInterval</key>
+    <integer>30</integer>
+
+    <key>StandardOutPath</key>
+    <string>/Users/TUUSER/whatsapp-claude-bridge/logs/launchd.out.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/TUUSER/whatsapp-claude-bridge/logs/launchd.err.log</string>
+</dict>
+</plist>

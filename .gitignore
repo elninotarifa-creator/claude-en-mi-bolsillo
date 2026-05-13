@@ -1,0 +1,20 @@
+# Secretos / datos personales
+config.json
+config.local.json
+prompts/ceo.md
+com.*.whatsapp-claude.plist
+!com.example.whatsapp-claude.plist
+
+# Entornos
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Estado y logs (datos privados de conversaciones, gasto, sesiones)
+state/
+logs/
+
+# Macros del sistema
+.DS_Store
+*.swp

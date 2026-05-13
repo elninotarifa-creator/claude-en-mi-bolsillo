@@ -1,0 +1,27 @@
+{
+  "owner_jid": "34XXXXXXXXX",
+  "allowed_chats": {
+    "120363XXXXXXXXXXXX@g.us": "Nombre del grupo"
+  },
+  "bridge_url": "http://localhost:8080",
+  "messages_db": "/Users/TUUSER/whatsapp-mcp/whatsapp-bridge/store/messages.db",
+  "model": "claude-opus-4-7",
+  "max_turns": 25,
+  "poll_interval_seconds": 2,
+  "context_window_messages": 60,
+  "daily_budget_eur": 15.0,
+  "price_per_million_input_tokens_eur": 14.0,
+  "price_per_million_output_tokens_eur": 70.0,
+  "system_prompt_file": "prompts/ceo.md",
+  "whisper_model": "mlx-community/whisper-large-v3-turbo",
+  "mcp_servers": [
+    "gmail-personal",
+    "gmail-trabajo",
+    "gdrive-personal",
+    "gdrive-trabajo",
+    "gcal-personal",
+    "gcal-trabajo",
+    "email-imap",
+    "whatsapp"
+  ]
+}
